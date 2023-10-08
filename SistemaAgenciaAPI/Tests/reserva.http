@@ -1,0 +1,30 @@
+### Listar reservas
+GET https://localhost:7176/api/reserva/listar
+
+### Buscar reserva
+GET https://localhost:7176/api/reserva/buscar/1
+
+### Cadastrar reserva
+POST https://localhost:7176/api/reserva/cadastrar
+Content-Type: application/json
+
+{
+  "ClienteId": 1,
+  "PacoteId": 1,
+  "NumeroPessoas": 1,
+  "Status": "pendente"
+}
+
+### Atualizar reserva
+PUT https://localhost:7176/api/reserva/alterar/20
+Content-Type: application/json
+
+{
+  "ClienteId": 1,
+  "PacoteId": 1,
+  "NumeroPessoas": 3,
+  "Status": "pendente"
+}
+
+### Deletar reserva
+DELETE https://localhost:7176/api/reserva/deletar/19

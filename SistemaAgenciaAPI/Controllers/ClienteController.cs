@@ -30,7 +30,7 @@ namespace SistemaAgenciaAPI.Controllers
 
         }
 
-        // GET: api/cliente/{id}
+        // GET: api/cliente/{nome}
         [HttpGet]
         [Route("buscar/{nome}")]
         public IActionResult Buscar([FromRoute] string nome)

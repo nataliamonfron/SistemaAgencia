@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using SistemaAgenciaAPI.Data;
-using SistemaAgenciaAPI.Models;
 
 namespace SistemaAgenciaAPI.Controllers
 {
@@ -30,14 +29,14 @@ namespace SistemaAgenciaAPI.Controllers
 
         }
 
-        // GET: api/pacote/{id}
+        // GET: api/pacote/{nome}
         [HttpGet]
         [Route("buscar/{nome}")]
-        public IActionResult Buscar([FromRoute] string nomePacote)
+        public IActionResult Buscar([FromRoute] string nome)
         {
             try
             {
-                Pacote? pacoteCadastrado = _ctx.Pacotes.FirstOrDefault(x => x.NomePacote == nomePacote);
+                Pacote? pacoteCadastrado = _ctx.Pacotes.FirstOrDefault(x => x.NomePacote == nome);
                 if (pacoteCadastrado != null)
                 {
                     return Ok(pacoteCadastrado);
@@ -46,7 +45,6 @@ namespace SistemaAgenciaAPI.Controllers
             }
             catch (Exception e)
             {
-                
                 return BadRequest(e.Message);
             }
 

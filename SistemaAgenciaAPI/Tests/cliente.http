@@ -1,0 +1,27 @@
+### Listar clientes
+GET https://localhost:7176/api/cliente/listar
+
+### Buscar cliente
+GET https://localhost:7176/api/cliente/buscar/Ana
+
+### Cadastrar cliente
+POST https://localhost:7176/api/cliente/cadastrar
+Content-Type: application/json
+
+{
+    "nomeCliente" : "Pedro",
+    "email" : "pedro@gmail.com",
+    "cpf" : "056456456",
+    "telefone" : "65465456"
+}
+
+### Alterar cliente
+PUT https://localhost:7176/api/cliente/alterar/2
+Content-Type: application/json
+
+{
+    "nomeCliente" : "João",
+    "email" : "joão@gmail.com",
+    "cpf" : "08956632215",
+    "telefone" : "41925523690"
+}

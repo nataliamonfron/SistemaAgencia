@@ -6,7 +6,7 @@ public class Pacote
     public string? NomePacote { get; set; } 
     public string? Origem { get; set; } 
     public string? Destino { get; set; } 
-    public decimal Valor { get; set; } 
+    public double Valor { get; set; } 
     public DateTime DataPartida { get; set; } 
     public DateTime DataRetorno { get; set; } 
     public int VagasDisponiveis { get; set; } 

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SistemaAgenciaAPI.Data;
 
@@ -10,9 +11,10 @@ using SistemaAgenciaAPI.Data;
 namespace SistemaAgenciaAPI.Migrations
 {
     [DbContext(typeof(AppDataContext))]
-    partial class AppDataContextModelSnapshot : ModelSnapshot
+    [Migration("20231008210537_DropColumnValorTotal")]
+    partial class DropColumnValorTotal
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.21");
@@ -98,9 +100,6 @@ namespace SistemaAgenciaAPI.Migrations
 
                     b.Property<string>("Status")
                         .HasColumnType("TEXT");
-
-                    b.Property<double>("ValorTotal")
-                        .HasColumnType("REAL");
 
                     b.HasKey("ReservaId");
 

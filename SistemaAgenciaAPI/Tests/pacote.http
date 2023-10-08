@@ -1,0 +1,36 @@
+### Listar pacotes
+GET https://localhost:7176/api/pacote/listar
+
+### Buscar pacote
+GET https://localhost:7176/api/pacote/buscar/CWBpGRU
+
+### Cadastrar pacote
+POST https://localhost:7176/api/pacote/cadastrar
+Content-Type: application/json
+
+{
+  "NomePacote": "CWBpPOA",
+  "Origem": "CWB",
+  "Destino": "POA",
+  "Valor": 850.00,
+  "DataPartida": "2023-10-25",
+  "DataRetorno": "2023-10-29",
+  "VagasDisponiveis": 2
+}
+
+### Atualizar pacote
+PUT https://localhost:7176/api/pacote/alterar/1
+Content-Type: application/json
+
+{
+  "NomePacote": "CWBpGRU",
+  "Origem": "CWB",
+  "Destino": "GRU",
+  "Valor": 200.00,
+  "DataPartida": "2023-11-01",
+  "DataRetorno": "2023-11-05",
+  "VagasDisponiveis": 10
+}
+
+### Deletar pacote
+DELETE https://localhost:7176/api/pacote/deletar/3
