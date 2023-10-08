@@ -8,6 +8,7 @@ public class Reserva
     public int ClienteId { get; set; }
     public Pacote? Pacote { get; set; }
     public int PacoteId { get; set; }
+    public int NumeroPessoas { get; set; }
     public string? Status { get; set; } // pendente, confirmada, cancelada
     public double ValorTotal { get; set; } 
     public DateTime CriadoEm { get; set; }

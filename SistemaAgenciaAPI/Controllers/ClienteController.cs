@@ -37,7 +37,7 @@ namespace SistemaAgenciaAPI.Controllers
         {
             try
             {
-                Cliente? clienteCadastrado = _ctx.Clientes.FirstOrDefault(x => x.Nome == nome);
+                Cliente? clienteCadastrado = _ctx.Clientes.FirstOrDefault(x => x.NomeCliente == nome);
                 if (clienteCadastrado != null)
                 {
                     return Ok(clienteCadastrado);
@@ -82,7 +82,7 @@ namespace SistemaAgenciaAPI.Controllers
 
                 if (clienteCadastrado != null)
                 {
-                    clienteCadastrado.Nome = cliente.Nome;
+                    clienteCadastrado.NomeCliente = cliente.NomeCliente;
                     clienteCadastrado.Email = cliente.Email;
                     clienteCadastrado.Cpf = cliente.Cpf;
                     clienteCadastrado.Telefone = cliente.Telefone;
