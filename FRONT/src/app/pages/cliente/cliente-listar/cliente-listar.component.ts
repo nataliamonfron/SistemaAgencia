@@ -10,7 +10,14 @@ import { Cliente } from '../../../models/cliente.model';
 })
 
 export class ClienteListarComponent {
-
+  colunasTabela: string [] = [
+    "id",
+    "nome",
+    "email",
+    "cpf",
+    "telefone",
+    "alterar",
+  ];
   clientes : Cliente[] = [];
 
   constructor(
@@ -33,4 +40,22 @@ export class ClienteListarComponent {
     });
   }
   
+  // deletar(clienteId: number) {
+  //   this.client
+  //   .delete<Cliente[]>{
+  //     'https://localhost:7195/api/cliente/deletar/${produtoId}'
+  //   }
+  //   .subscribe({
+  //     //A requisição funcionou
+  //     next: (clientes) => {
+  //       this.clientes = clientes;
+  //       console.log("CLIENTE DELETADO COM SUCESSO!")
+  //     }
+  //     //Falhou
+  //     error: (erro) => {
+  //       console.log(erro);
+  //     }
+  //   })
+  // }
+
 }
