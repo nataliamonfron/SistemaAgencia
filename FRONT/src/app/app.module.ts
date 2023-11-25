@@ -21,6 +21,9 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatInputModule } from "@angular/material/input";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { PacoteListarComponent } from "./pages/pacote/pacote-listar/pacote-listar.component";
+import { PacoteCadastrarComponent } from "./pages/pacote/pacote-cadastrar/pacote-cadastrar.component";
+import { PacoteAlterarComponent } from "./pages/pacote/pacote-alterar/pacote-alterar.component";
 
 
 @NgModule({
@@ -29,6 +32,8 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
     ClienteListarComponent,
     ClienteCadastrarComponent,
     ClienteAlterarComponent,
+    PacoteListarComponent,
+
   ],
   imports: [
     BrowserModule,

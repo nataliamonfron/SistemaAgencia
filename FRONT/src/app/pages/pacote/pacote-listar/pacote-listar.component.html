@@ -1,44 +1,45 @@
 <mat-card>
     <mat-card-header>
-        <mat-card-title>Lista de Clientes</mat-card-title>
+        <mat-card-title>Lista de Pacotes</mat-card-title>
 
     </mat-card-header>
     <mat-card-content>
         <table
             id="table"
             mat-table
-            [dataSource]="clientes"
+            [dataSource]="pacotes"
             class="mat-elevation-z4"
         >
         <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef>#</th>
-            <td mat-cell *matCellDef="let cliente">{{ cliente.clienteId }}</td>
+            <td mat-cell *matCellDef="let pacote">{{ pacote.pacoteId }}</td>
         </ng-container>
         <ng-container matColumnDef="nome">
             <th mat-header-cell *matHeaderCellDef>Nome</th>
-            <td mat-cell *matCellDef="let cliente">{{ cliente.nomeCliente }}</td>
+            <td mat-cell *matCellDef="let pacote">{{ pacote.nomePacote }}</td>
         </ng-container>
-        <ng-container matColumnDef="email">
-            <th mat-header-cell *matHeaderCellDef>E-mail</th>
-            <td mat-cell *matCellDef="let cliente">{{ cliente.email }}</td>
+        <ng-container matColumnDef="origem">
+            <th mat-header-cell *matHeaderCellDef>Origem</th>
+            <td mat-cell *matCellDef="let pacote">{{ pacote.origem }}</td>
         </ng-container>
-        <ng-container matColumnDef="cpf">
-            <th mat-header-cell *matHeaderCellDef>CPF</th>
-            <td mat-cell *matCellDef="let cliente">{{ cliente.cpf }}</td>
+        <ng-container matColumnDef="destino">
+            <th mat-header-cell *matHeaderCellDef>Destino</th>
+            <td mat-cell *matCellDef="let pacote">{{ pacote.destino }}</td>
         </ng-container>
-        <ng-container matColumnDef="telefone">
-            <th mat-header-cell *matHeaderCellDef>Telefone</th>
-            <td mat-cell *matCellDef="let cliente">{{ cliente.telefone }}</td>
+        <ng-container matColumnDef="valor">
+            <th mat-header-cell *matHeaderCellDef>Valor</th>
+            <td mat-cell *matCellDef="let pacote">{{ pacote.valor }}</td>
         </ng-container>
+
 
         <ng-container matColumnDef="alterar">
             <th mat-header-cell *matHeaderCellDef>Alterar</th>
-            <td mat-cell *matCellDef="let cliente">
+            <td mat-cell *matCellDef="let pacote">
                 <a
                 color="accent"
                 mat-stroked-button
-                routerLink="/pages/cliente/alterar/{{
-                cliente.clienteId
+                routerLink="/pages/pacote/alterar/{{
+                pacote.pacoteId
                 }}"
                 >
                  Alterar
@@ -48,11 +49,11 @@
         </ng-container>
         <ng-container matColumnDef="deletar">
             <th mat-header-cell *matHeaderCellDef>Deletar</th>
-            <td mat-cell *matCellDef="let cliente">
+            <td mat-cell *matCellDef="let pacote">
               <button
                 color="warn"
                 mat-stroked-button
-                (click)="deletar(cliente.clienteId)"
+                (click)="deletar(pacote.pacoteId)"
               >
                 Deletar
               </button>

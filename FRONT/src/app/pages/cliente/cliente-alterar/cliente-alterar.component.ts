@@ -2,8 +2,7 @@ import { Cliente } from './../../../models/cliente.model';
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from "@angular/router";
-// import { Router } from '@angular/router';
-// import { ActivatedRoute, Params } from '@angular/router';
+
 
 
 @Component({
@@ -29,7 +28,7 @@ export class ClienteAlterarComponent {
       next: (parametros) => {
         let { id } = parametros;
         this.client
-          .get<Cliente>(`https://localhost:7195/api/cliente/buscar/${id}`)
+          .get<Cliente>(`https://localhost:7176/api/cliente/buscar/${id}`)
           .subscribe({
             next: (cliente) => {
               this.clienteId = cliente.clienteId!;
@@ -57,12 +56,12 @@ alterar(): void {
   console.log(cliente);
 
   this.client
-  .put<Cliente>(`http://localhost:7195/api/cliente/alterar/${this.clienteId}`, 
+  .put<Cliente>(`https://localhost:7176/api/cliente/alterar/${this.clienteId}`, 
   cliente)
   .subscribe({
     //A requisição funcionou
     next: (cliente) => {
-      console.log("Cliente alterado com sucesso!", cliente);
+      
       this.router.navigate(["pages/cliente/listar"]);
     },
     //A requisição falhou

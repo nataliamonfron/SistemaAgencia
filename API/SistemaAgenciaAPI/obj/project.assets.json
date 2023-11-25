@@ -1692,19 +1692,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Daniel\\.nuget\\packages\\": {}
+    "C:\\Users\\Natalia\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Daniel\\Desktop\\SistemaAgencia\\API\\SistemaAgenciaAPI\\SistemaAgenciaAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Natalia\\Desktop\\SistemaAgencia\\API\\SistemaAgenciaAPI\\SistemaAgenciaAPI.csproj",
       "projectName": "SistemaAgenciaAPI",
-      "projectPath": "C:\\Users\\Daniel\\Desktop\\SistemaAgencia\\API\\SistemaAgenciaAPI\\SistemaAgenciaAPI.csproj",
-      "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Daniel\\Desktop\\SistemaAgencia\\API\\SistemaAgenciaAPI\\obj\\",
+      "projectPath": "C:\\Users\\Natalia\\Desktop\\SistemaAgencia\\API\\SistemaAgenciaAPI\\SistemaAgenciaAPI.csproj",
+      "packagesPath": "C:\\Users\\Natalia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Natalia\\Desktop\\SistemaAgencia\\API\\SistemaAgenciaAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Natalia\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1762,7 +1762,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
       }
     }
   }

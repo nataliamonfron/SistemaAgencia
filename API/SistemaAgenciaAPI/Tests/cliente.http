@@ -2,7 +2,10 @@
 GET https://localhost:7176/api/cliente/listar
 
 ### Buscar cliente
-GET https://localhost:7176/api/cliente/buscar/Ana
+GET https://localhost:7176/api/cliente/buscarnome/Ana
+
+### Buscar cliente
+GET https://localhost:7176/api/cliente/buscar/2
 
 ### Cadastrar cliente
 POST https://localhost:7176/api/cliente/cadastrar
@@ -20,7 +23,7 @@ PUT https://localhost:7176/api/cliente/alterar/2
 Content-Type: application/json
 
 {
-    "nomeCliente" : "João",
+    "nomeCliente" : "Nat",
     "email" : "joão@gmail.com",
     "cpf" : "08956632215",
     "telefone" : "41925523690"

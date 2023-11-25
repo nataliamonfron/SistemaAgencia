@@ -5,9 +5,10 @@
     </mat-card-header>
     <mat-card-content>
         <mat-form-field class="input" id="id">
+        <mat-label>Id</mat-label>
         <input
         placeholder="nome"
-        matinput
+        matInput
         type="text"
         [(ngModel)]="clienteId"
         disabled="true"
@@ -43,7 +44,7 @@
     <mat-form-field class="input" id="telefone">
       <mat-label>Telefone</mat-label>
       <input
-        placeholder="(00) 00000-0000"
+        placeholder="00000000000"
         matInput
         type="text"
         [(ngModel)]="telefone"

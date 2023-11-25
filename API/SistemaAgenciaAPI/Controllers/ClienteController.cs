@@ -32,7 +32,7 @@ namespace SistemaAgenciaAPI.Controllers
 
         // GET: api/cliente/{nome}
         [HttpGet]
-        [Route("buscar/{nome}")]
+        [Route("buscarnome/{nome}")]
         public IActionResult Buscar([FromRoute] string nome)
         {
             try
@@ -50,6 +50,28 @@ namespace SistemaAgenciaAPI.Controllers
                 return BadRequest(e.Message);
             }
 
+        }
+
+        // GET: api/cliente/{id}
+        [HttpGet]
+        [Route("buscar/{id}")]
+        public IActionResult Buscar([FromRoute] int id)
+        {
+            try
+            {
+                Cliente? clienteCadastrado =
+                    _ctx.Clientes
+                    .FirstOrDefault(x => x.ClienteId == id);
+                if (clienteCadastrado != null)
+                {
+                    return Ok(clienteCadastrado);
+                }
+                return NotFound();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         // POST: api/cliente
