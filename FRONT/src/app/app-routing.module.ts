@@ -18,9 +18,10 @@ const routes: Routes = [
     component: ClienteCadastrarComponent,
   },
   {
-    path: "pages/cliente/alterar",
+    path: "pages/cliente/alterar/:id",
     component: ClienteAlterarComponent,
   },
+ 
 ];
 
 @NgModule({

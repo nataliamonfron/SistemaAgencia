@@ -17,6 +17,7 @@ export class ClienteListarComponent {
     "cpf",
     "telefone",
     "alterar",
+    "deletar",
   ];
   clientes : Cliente[] = [];
 
@@ -40,22 +41,22 @@ export class ClienteListarComponent {
     });
   }
   
-  // deletar(clienteId: number) {
-  //   this.client
-  //   .delete<Cliente[]>{
-  //     'https://localhost:7195/api/cliente/deletar/${produtoId}'
-  //   }
-  //   .subscribe({
-  //     //A requisição funcionou
-  //     next: (clientes) => {
-  //       this.clientes = clientes;
-  //       console.log("CLIENTE DELETADO COM SUCESSO!")
-  //     }
-  //     //Falhou
-  //     error: (erro) => {
-  //       console.log(erro);
-  //     }
-  //   })
-  // }
+  deletar(clienteId: number) {
+    this.client
+    .delete<Cliente[]>(
+      'https://localhost:7195/api/cliente/deletar/${clienteId}'
+    )
+    .subscribe({
+      //A requisição funcionou
+      next: (clientes) => {
+        this.clientes = clientes;
+        console.log("CLIENTE DELETADO COM SUCESSO!")
+      },
+      //Falhou
+      error: (erro) => {
+        console.log(erro);
+      },
+    });
+  }
 
 }

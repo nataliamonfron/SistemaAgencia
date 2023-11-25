@@ -61,7 +61,7 @@ alterar(): void {
   cliente)
   .subscribe({
     //A requisição funcionou
-    next: (produto) => {
+    next: (cliente) => {
       console.log("Cliente alterado com sucesso!", cliente);
       this.router.navigate(["pages/cliente/listar"]);
     },
@@ -70,6 +70,7 @@ alterar(): void {
       console.log(erro);
     },
   });
+
 
 }
 

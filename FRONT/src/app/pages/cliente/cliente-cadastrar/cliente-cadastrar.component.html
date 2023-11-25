@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     <h2>Cadastrar Cliente</h2>
     <form (submit)="cadastrar()">
       <div>
@@ -19,4 +19,56 @@
     </div>
       <button type="submit">Cadastrar</button>
     </form>
-  </div>
+  </div> -->
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Cadastrar Cliente</mat-card-title>
+      <mat-card-subtitle>&nbsp;</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field class="input" id="nome">
+        <mat-label>Nome</mat-label>
+        <input
+          placeholder="Nome"
+          matInput
+          type="text"
+          [(ngModel)]="nomeCliente"
+        />
+      </mat-form-field>
+      <mat-form-field class="input" id="email">
+        <mat-label>E-mail</mat-label>
+        <input
+          placeholder="E-mail"
+          matInput
+          type="text"
+          [(ngModel)]="email"
+        />
+      </mat-form-field>
+      <mat-form-field class="input" id="cpf">
+        <mat-label>CPF</mat-label>
+        <input
+          placeholder="Cpf"
+          matInput
+          type="text"
+          [(ngModel)]="cpf"
+        />
+      </mat-form-field>
+      <mat-form-field class="input" id="telefone">
+        <mat-label>Telefone</mat-label>
+        <input
+          placeholder="telefone"
+          matInput
+          type="text"
+          [(ngModel)]="telefone"
+        />
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button color="warn" mat-stroked-button (click)="cadastrar()">
+        Cadastrar
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+ 
