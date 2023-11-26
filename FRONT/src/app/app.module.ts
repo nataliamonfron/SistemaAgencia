@@ -25,7 +25,12 @@ import { PacoteListarComponent } from "./pages/pacote/pacote-listar/pacote-lista
 import { PacoteCadastrarComponent } from "./pages/pacote/pacote-cadastrar/pacote-cadastrar.component";
 import { PacoteAlterarComponent } from "./pages/pacote/pacote-alterar/pacote-alterar.component";
 import { ReservaListarComponent } from "./pages/reserva/reserva-listar/reserva-listar.component";
+import { ReservaCadastrarComponent } from "./pages/reserva/reserva-cadastrar/reserva-cadastrar.component";
+import { ReservaAlterarComponent } from "./pages/reserva/reserva-alterar/reserva-alterar.component";
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
+
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -34,7 +39,11 @@ import { ReservaListarComponent } from "./pages/reserva/reserva-listar/reserva-l
     ClienteCadastrarComponent,
     ClienteAlterarComponent,
     PacoteListarComponent,
+    PacoteCadastrarComponent,
+    PacoteAlterarComponent,
+    ReservaCadastrarComponent,
     ReservaListarComponent,
+    ReservaAlterarComponent,
 
   ],
   imports: [
@@ -54,6 +63,18 @@ import { ReservaListarComponent } from "./pages/reserva/reserva-listar/reserva-l
     MatInputModule,
     MatFormFieldModule,
     MatSnackBarModule,
+    MatToolbarModule, 
+    MatIconModule,
+    MatButtonToggleModule, 
+    MatIconModule,
+
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

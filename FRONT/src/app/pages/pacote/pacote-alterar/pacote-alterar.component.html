@@ -1,1 +1,86 @@
-<p>pacote-alterar works!</p>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Alterar Pacote</mat-card-title>
+
+    </mat-card-header>
+    <mat-card-content>
+        <mat-form-field class="input" id="id">
+        <mat-label>Id</mat-label>
+        <input
+        placeholder="nome"
+        matInput
+        type="text"
+        [(ngModel)]="pacoteId"
+        disabled="true"
+        />
+    </mat-form-field>
+    <mat-form-field class="input" id="nome">
+      <mat-label>Pacote</mat-label>
+      <input
+        placeholder="nome"
+        matInput
+        type="text"
+        [(ngModel)]="nomePacote"
+      />
+    </mat-form-field>
+    <mat-form-field class="input" id="origem">
+      <mat-label>Origem</mat-label>
+      <input
+        placeholder="origem"
+        matInput
+        type="text"
+        [(ngModel)]="origem"
+      />
+    </mat-form-field>
+    <mat-form-field class="input" id="destino">
+      <mat-label>Destino</mat-label>
+      <input
+        placeholder="destino"
+        matInput
+        type="text"
+        [(ngModel)]="destino"
+      />
+    </mat-form-field>
+    <mat-form-field class="input" id="valor">
+      <mat-label>Valor</mat-label>
+      <span matPrefix>R$ &nbsp;</span>
+      <input
+        placeholder="R$"
+        matInput
+        type="text"
+        [(ngModel)]="valor"
+      />
+        </mat-form-field>
+        <mat-form-field class="input" id="dataPartida">
+            <mat-label>Data Partida</mat-label>
+            <input placeholder="Data" 
+                matInput type="date" 
+                [(ngModel)]="dataPartida" />
+            </mat-form-field>
+              <mat-form-field class="input" id="dataRetorno">
+                <mat-label>Data Retorno</mat-label>
+                <input placeholder="Data" 
+                matInput type="date" 
+                [(ngModel)]="dataRetorno" />
+            </mat-form-field>
+                  <mat-form-field class="input" id="vagasDisponiveis">
+                    <mat-label>Vagas Disponíveis</mat-label>
+                    <input
+                      placeholder="vagas"
+                      matInput
+                      type="number"
+                      [(ngModel)]="vagasDisponiveis"
+            />
+            </mat-form-field>
+                
+    </mat-card-content>
+   <mat-card-actions>
+        <button color="warn" mat-stroked-button (click)="alterar()">
+            Alterar
+        </button> 
+    </mat-card-actions>
+    
+
+</mat-card>
+
+

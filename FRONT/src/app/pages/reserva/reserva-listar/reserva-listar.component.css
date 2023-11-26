@@ -1,8 +1,42 @@
-table {
+/* table {
     width: 100%;
   }
   
   td,
   th {
     text-align: center;
+  } */
+
+  #table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
   }
+  
+  
+  .example-icon {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  
+  
+  .mat-stroked-button {
+    margin-right: 5px;
+  }
+  
+  
+  mat-card {
+    margin: 20px;
+  }
+  
+  
+  mat-card-header {
+    background-color: rgb(104, 82, 184);
+    color: white;
+  }
+  
+  
+  mat-card-content {
+    padding: 15px;
+  }
+  

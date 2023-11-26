@@ -1,1 +1,124 @@
-<p>reserva-cadastrar works!</p>
+<!-- <mat-card>
+    <mat-card-header>
+      <mat-card-title>Cadastrar Reserva</mat-card-title>
+      <mat-card-subtitle>&nbsp;</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field class="input" id="nome">
+        <mat-label>Nome</mat-label>
+        <input
+          placeholder="Nome"
+          matInput
+          type="text"
+          [(ngModel)]="nomeCliente"
+        />
+      </mat-form-field>
+      <mat-form-field class="input" id="pacote">
+        <mat-label>Pacote</mat-label>
+        <mat-select [(ngModel)]="pacoteId">
+          <mat-option
+            *ngFor="let p of pacotes"
+            [value]="p.pacoteId"
+          >
+            {{ p.nomePacote }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="input" id="numeroPessoas">
+        <mat-label>Número de pessoas</mat-label>
+        <input
+          placeholder="número de pessoas"
+          matInput
+          type="text"
+          [(ngModel)]="numeroPessoas"
+        />
+      </mat-form-field>
+      <mat-form-field class="input" id="status">
+        <mat-label>Status</mat-label>
+        <input
+          placeholder="Status"
+          matInput
+          type="text"
+          [(ngModel)]="status"
+        />
+      </mat-form-field>
+      <mat-form-field class="input" id="criadoEm">
+        <mat-label>Data de criação</mat-label>
+        <input
+          placeholder="data"
+          matInput
+          type="date"
+          [(ngModel)]="criadoEm"
+        />
+      </mat-form-field>
+      <mat-form-field class="input" id="valorTotal">
+        <mat-label>Valor total</mat-label>
+        <span matPrefix>R$ &nbsp;</span>
+        <input
+          placeholder="valor total"
+          matInput
+          type="text"
+          [(ngModel)]="valorTotal"
+        />
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button color="warn" mat-stroked-button (click)="cadastrar()">
+        Cadastrar
+      </button>
+    </mat-card-actions>
+  </mat-card> -->
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Cadastrar Reserva</mat-card-title>
+      <mat-card-subtitle>&nbsp;</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-form-field class="input" id="clienteId">
+            <mat-label>ID do Cliente</mat-label>
+            <input
+              placeholder="ID do Cliente"
+              matInput
+              type="number"
+              [(ngModel)]="clienteId"
+            />
+          </mat-form-field>
+          
+          <mat-form-field class="input" id="pacote">
+            <mat-label>Pacote</mat-label>
+            <mat-select [(ngModel)]="pacoteId">
+              <mat-option *ngFor="let p of pacotes" [value]="p.pacoteId">
+                {{ p.nomePacote }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+      <mat-form-field class="input" id="numeroPessoas">
+        <mat-label>Número de pessoas</mat-label>
+        <input
+          placeholder="Número de pessoas"
+          matInput
+          type="number"
+          [(ngModel)]="numeroPessoas"
+        />
+      </mat-form-field>
+  
+      <mat-form-field class="input" id="status">
+        <mat-label>Status</mat-label>
+        <input placeholder="Status" matInput type="text" [(ngModel)]="status" />
+      </mat-form-field>
+  
+      <mat-form-field class="input" id="criadoEm">
+        <mat-label>Data de criação</mat-label>
+        <input placeholder="Data" matInput type="date" [(ngModel)]="criadoEm" />
+      </mat-form-field>
+  
+    </mat-card-content>
+  
+    <mat-card-actions>
+      <button color="warn" mat-stroked-button (click)="cadastrar()">Cadastrar</button>
+    </mat-card-actions>
+  </mat-card>
+  

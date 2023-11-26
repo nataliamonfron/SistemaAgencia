@@ -21,8 +21,8 @@ export class ReservaListarComponent {
     "status",
     "valorTotal",
     "criadoEm",
-    "deletar",
     "alterar",
+    "deletar",
   ];
   reservas: Reserva[] = [];
 

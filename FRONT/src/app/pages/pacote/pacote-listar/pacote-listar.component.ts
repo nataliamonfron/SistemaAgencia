@@ -18,6 +18,7 @@ export class PacoteListarComponent {
     "valor",
     "dataPartida",
     "dataRetorno",
+    "vagasDisponiveis",
     "alterar",
     "deletar",
   ];
