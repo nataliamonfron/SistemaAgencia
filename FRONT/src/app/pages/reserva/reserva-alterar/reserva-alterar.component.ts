@@ -10,7 +10,7 @@ import { Reserva } from '../../../models/reserva.model';
   templateUrl: './reserva-alterar.component.html',
   styleUrls: ['./reserva-alterar.component.css']
 })
-export class ReservaAlterarComponent implements OnInit {
+export class ReservaAlterarComponent {
   reservaId: number = 0;
   clienteId: number = 0;
   pacoteId: number = 0;
@@ -28,40 +28,57 @@ export class ReservaAlterarComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-   
-    this.route.params.subscribe( {
+    this.route.params.subscribe({
       next: (parametros) => {
-      let { id } = parametros;
-   
-    this.client
-      .get<Reserva>(`https://localhost:7176/api/reserva/${this.reservaId}`)
-      .subscribe({
-        next: (reserva) => {
-         
-          this.clienteId = reserva.clienteId;
-          this.pacoteId = reserva.pacoteId;
-          this.numeroPessoas = reserva.numeroPessoas;
-          this.status = reserva.status;
-          this.criadoEm = reserva.criadoEm;
-          this.valorTotal = reserva.valorTotal;
-        },
-        error: (erro) => {
-          console.log(erro);
-        },
-      });
-
-    
-    this.client
-      .get<Pacote[]>("https://localhost:7176/api/pacote/listar")
-      .subscribe({
-        next: (pacotes) => {
-          console.table(pacotes);
-          this.pacotes = pacotes;
-        },
-        error: (erro) => {
-          console.log(erro);
-        },
-      });
+        let { id } = parametros;
+  
+        this.client
+          .get<Reserva>(
+            `https://localhost:7176/api/reserva/buscar/${id}`
+          )
+          .subscribe({
+            next: (reserva) => {
+              // p bter os pacotes
+              this.client
+                .get<Pacote[]>(
+                  "https://localhost:7176/api/pacote/listar"
+                )
+                .subscribe({
+                  next: (pacotes) => {
+                    this.pacotes = pacotes;
+  
+                    // p obter os clientes
+                    this.client
+                      .get<Cliente[]>(
+                        "https://localhost:7176/api/cliente/listar"
+                      )
+                      .subscribe({
+                        next: (clientes) => {
+                          this.clientes = clientes;
+  
+                          
+                          this.reservaId = reserva.reservaId!;
+                          this.clienteId = reserva.clienteId;
+                          this.pacoteId = reserva.pacoteId;
+                          this.numeroPessoas = reserva.numeroPessoas;
+                          this.status = reserva.status;
+                          this.criadoEm = reserva.criadoEm;
+                          this.valorTotal = reserva.valorTotal;
+                        },
+                        error: (erro) => {
+                          console.log(erro);
+                        },
+                      });
+                  },
+                  error: (erro) => {
+                    console.log(erro);
+                  },
+                });
+            },
+            error: (erro) => {
+              console.log(erro);
+            },
+          });
       },
     });
   }
