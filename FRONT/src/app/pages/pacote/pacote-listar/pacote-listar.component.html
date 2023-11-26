@@ -30,6 +30,14 @@
             <th mat-header-cell *matHeaderCellDef>Valor</th>
             <td mat-cell *matCellDef="let pacote">{{ pacote.valor }}</td>
         </ng-container>
+        <ng-container matColumnDef="dataPartida">
+            <th mat-header-cell *matHeaderCellDef>Data de Partida</th>
+            <td mat-cell *matCellDef="let pacote">{{ pacote.dataPartida }}</td>
+        </ng-container>
+        <ng-container matColumnDef="dataRetorno">
+            <th mat-header-cell *matHeaderCellDef>Data de Retorno</th>
+            <td mat-cell *matCellDef="let pacote">{{ pacote.dataRetorno }}</td>
+        </ng-container>
 
 
         <ng-container matColumnDef="alterar">

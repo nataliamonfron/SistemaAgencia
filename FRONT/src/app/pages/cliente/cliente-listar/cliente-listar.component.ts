@@ -44,13 +44,12 @@ export class ClienteListarComponent {
   deletar(clienteId: number) {
     this.client
     .delete<Cliente[]>(
-      'https://localhost:7195/api/cliente/deletar/${clienteId}'
+      `https://localhost:7176/api/cliente/deletar/${clienteId}`
     )
     .subscribe({
       //A requisição funcionou
       next: (clientes) => {
         this.clientes = clientes;
-        console.log("CLIENTE DELETADO COM SUCESSO!")
       },
       //Falhou
       error: (erro) => {

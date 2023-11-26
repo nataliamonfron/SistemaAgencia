@@ -4,6 +4,7 @@ import { ClienteListarComponent } from "./pages/cliente/cliente-listar/cliente-l
 import { ClienteCadastrarComponent } from "./pages/cliente/cliente-cadastrar/cliente-cadastrar.component";
 import { ClienteAlterarComponent } from "./pages/cliente/cliente-alterar/cliente-alterar.component";
 import { PacoteListarComponent } from "./pages/pacote/pacote-listar/pacote-listar.component";
+import { ReservaListarComponent } from "./pages/reserva/reserva-listar/reserva-listar.component";
 
 const routes: Routes = [
   {
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path:"pages/pacote/listar",
     component: PacoteListarComponent,
+  },
+  {
+    path:"pages/reserva/listar",
+    component: ReservaListarComponent,
   },
  
 ];

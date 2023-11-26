@@ -24,6 +24,7 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { PacoteListarComponent } from "./pages/pacote/pacote-listar/pacote-listar.component";
 import { PacoteCadastrarComponent } from "./pages/pacote/pacote-cadastrar/pacote-cadastrar.component";
 import { PacoteAlterarComponent } from "./pages/pacote/pacote-alterar/pacote-alterar.component";
+import { ReservaListarComponent } from "./pages/reserva/reserva-listar/reserva-listar.component";
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { PacoteAlterarComponent } from "./pages/pacote/pacote-alterar/pacote-alt
     ClienteCadastrarComponent,
     ClienteAlterarComponent,
     PacoteListarComponent,
+    ReservaListarComponent,
 
   ],
   imports: [

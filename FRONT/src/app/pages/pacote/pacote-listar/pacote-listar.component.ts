@@ -13,9 +13,11 @@ export class PacoteListarComponent {
   colunasTabela: string [] = [
     "id",
     "nome",
-    "email",
-    "cpf",
-    "telefone",
+    "origem",
+    "destino",
+    "valor",
+    "dataPartida",
+    "dataRetorno",
     "alterar",
     "deletar",
   ];
@@ -44,13 +46,12 @@ export class PacoteListarComponent {
   deletar(pacoteId: number) {
     this.client
     .delete<Pacote[]>(
-      'https://localhost:7195/api/pacote/deletar/${pacoteId}'
+      `https://localhost:7176/api/pacote/deletar/${pacoteId}`
     )
     .subscribe({
       //A requisição funcionou
       next: (pacotes) => {
         this.pacotes = pacotes;
-        console.log("CLIENTE DELETADO COM SUCESSO!")
       },
       //Falhou
       error: (erro) => {

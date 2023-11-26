@@ -8,17 +8,39 @@
 <mat-sidenav-container class="container">
     <mat-sidenav #sidenav [opened]="true" mode="side">
         <mat-nav-list>
-            <a mat-list-item routerLink="/pages/cliente/listar">
-                <div class="item">
-                  <span> Listar Clientes </span>
-                </div>
-              </a>
+
               <a mat-list-item routerLink="/pages/cliente/cadastrar">
                 <div class="item">
                   <span> Cadastrar Cliente </span>
                 </div>
               </a>
-             
+              <a mat-list-item routerLink="/pages/cliente/listar">
+                <div class="item">
+                  <span> Listar Clientes </span>
+                </div>
+              </a>
+
+              <a mat-list-item routerLink="/pages/pacote/cadastrar">
+                <div class="item">
+                  <span> Cadastrar Pacote </span>
+                </div>
+              </a>
+              <a mat-list-item routerLink="/pages/pacote/listar">
+                <div class="item">
+                  <span> Listar Pacotes </span>
+                </div>
+              </a>
+              <a mat-list-item routerLink="/pages/reserva/cadastrar">
+                <div class="item">
+                  <span> Cadastrar Reserva </span>
+                </div>
+              </a>
+              <a mat-list-item routerLink="/pages/reserva/listar">
+                <div class="item">
+                  <span> Relatório de Reservas </span>
+                </div>
+              </a>
+
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
