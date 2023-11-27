@@ -13,7 +13,7 @@ import { ReservaAlterarComponent } from './pages/reserva/reserva-alterar/reserva
 const routes: Routes = [
   {
     path: "",
-    component: ClienteListarComponent,
+    component: ReservaListarComponent,
   },
   {
     path:"pages/cliente/listar",
