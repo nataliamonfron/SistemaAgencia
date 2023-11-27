@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Cliente } from '../../../models/cliente.model';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -22,7 +23,8 @@ export class ClienteListarComponent {
   clientes : Cliente[] = [];
 
   constructor(
-    private client: HttpClient) {}
+    private client: HttpClient,
+    private router: Router,) {}
 
   ngOnInit(): void {
 
@@ -50,6 +52,7 @@ export class ClienteListarComponent {
       //A requisição funcionou
       next: (clientes) => {
         this.clientes = clientes;
+        this.router.navigate(["pages/cliente/listar"]);
       },
       //Falhou
       error: (erro) => {

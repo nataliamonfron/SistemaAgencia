@@ -41,19 +41,30 @@
           [(ngModel)]="valor"
         />
       </mat-form-field>
+
+      <mat-form-field class="input" id="dataPartida">
+        <mat-label>Data de Partoda</mat-label>
+        <input placeholder="Data" matInput type="date" [(ngModel)]="dataPartida" />
+      </mat-form-field>
+
+      <mat-form-field class="input" id="dataRetorno">
+        <mat-label>Data de Chegada</mat-label>
+        <input placeholder="Data" matInput type="date" [(ngModel)]="dataRetorno" />
+      </mat-form-field>
       
-      <ng-container matColumnDef="dataPartida">
+      <!-- <ng-container matColumnDef="dataPartida">
         <th mat-header-cell *matHeaderCellDef>Data de partida</th>
         <td mat-cell *matCellDef="let pacote">
           {{ pacote.dataPartida | date : "dd/MM/yyyy" }}
         </td>
       </ng-container>
+
       <ng-container matColumnDef="dataRetorno">
         <th mat-header-cell *matHeaderCellDef>Data de retorno</th>
         <td mat-cell *matCellDef="let pacote">
           {{ pacote.dataRetorno | date : "dd/MM/yyyy" }}
         </td>
-      </ng-container>
+      </ng-container> -->
 
       <mat-form-field class="input" id="vagasDisponiveis">
         <mat-label>Vagas Disponíveis</mat-label>

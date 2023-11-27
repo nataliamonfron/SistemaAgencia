@@ -116,18 +116,31 @@ export class ReservaCadastrarComponent implements OnInit {
     this.client
       .get<Pacote[]>("https://localhost:7176/api/pacote/listar")
       .subscribe({
-        //Requisição funcionando
+        // Requisição funcionando
         next: (pacotes) => {
           console.table(pacotes);
           this.pacotes = pacotes;
         },
-        //Requisição falhou
+        // Requisição falhou
         error: (erro) => {
           console.log(erro);
         },
-  });
-
-    
+      });
+  
+    // Requisição para listar os clientes
+    this.client
+      .get<Cliente[]>("https://localhost:7176/api/cliente/listar")
+      .subscribe({
+        // Requisição funcionando
+        next: (clientes) => {
+          console.table(clientes);
+          this.clientes = clientes;
+        },
+        // Requisição falhou
+        error: (erro) => {
+          console.log(erro);
+        },
+      });
   }
 
   cadastrar(): void {

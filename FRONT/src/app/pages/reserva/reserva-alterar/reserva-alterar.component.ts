@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Cliente } from '../../../models/cliente.model';
 import { Pacote } from '../../../models/pacote.model';
 import { Reserva } from '../../../models/reserva.model';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-reserva-alterar',
@@ -25,6 +26,7 @@ export class ReservaAlterarComponent {
     private client: HttpClient,
     private router: Router,
     private route: ActivatedRoute,
+    private snackBar: MatSnackBar,
   ) {}
 
   ngOnInit(): void {
@@ -104,7 +106,13 @@ export class ReservaAlterarComponent {
         },
         error: (erro) => {
           console.log(erro);
+          this.openSnackBar('Erro ao alterar a reserva.');
         },
       });
   }
+  openSnackBar(message: string): void {
+    this.snackBar.open(message, 'Fechar', {
+      duration: 3000, 
+    });
+}
 }

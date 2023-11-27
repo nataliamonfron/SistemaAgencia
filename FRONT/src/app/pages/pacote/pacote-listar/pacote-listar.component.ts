@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Pacote } from '../../../models/pacote.model';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -25,7 +26,8 @@ export class PacoteListarComponent {
   pacotes : Pacote[] = [];
 
   constructor(
-    private client: HttpClient) {}
+    private client: HttpClient,
+    private router: Router) {}
 
   ngOnInit(): void {
 
@@ -53,6 +55,8 @@ export class PacoteListarComponent {
       //A requisição funcionou
       next: (pacotes) => {
         this.pacotes = pacotes;
+        this.router.navigate(["pages/pacote/listar"]);
+        
       },
       //Falhou
       error: (erro) => {

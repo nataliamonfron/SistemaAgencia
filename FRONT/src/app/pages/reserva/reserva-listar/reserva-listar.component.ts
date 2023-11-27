@@ -6,6 +6,7 @@ import {
   MatTableDataSource,
 } from "@angular/material/table";
 import { Reserva } from "../../../models/reserva.model";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-reserva-listar",
@@ -28,6 +29,7 @@ export class ReservaListarComponent {
 
   constructor(
     private client: HttpClient,
+    private router: Router,
     private snackBar: MatSnackBar
   ) {
 
@@ -58,6 +60,7 @@ export class ReservaListarComponent {
         //Requisição com sucesso
         next: (reservas) => {
           this.reservas = reservas;
+          this.router.navigate(["pages/reserva/listar"]);
         },
         //Requisição com erro
         error: (erro) => {
